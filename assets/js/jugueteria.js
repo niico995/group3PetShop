@@ -63,8 +63,8 @@ if ($inputText) {
 
 ///////// funcion para guardar en el local storage
 function addToCart(productId, quantity) {
-  const cartProducts = JSON.parse(localStorage.getItem('cartProducts'));
-  const existingProductIndex = cartProducts.findIndex(item => item.productId === productId);
+  const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  const existingProductIndex = cartProducts.indexOf(productId);
 
   if (existingProductIndex === -1) {
     cartProducts.push({ productId, quantity });

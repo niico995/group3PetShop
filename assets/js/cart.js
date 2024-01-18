@@ -23,7 +23,8 @@ $paymentMethods.innerHTML += metodosPago(creditCards)
 
 
 
-
+const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+console.log(cartProducts)
 
 // Funciones
 
