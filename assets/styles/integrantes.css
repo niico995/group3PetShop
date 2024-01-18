@@ -43,3 +43,18 @@ main {
     height: 250px;
 }
 
+legend {
+    font-size: 14px;
+}
+
+a {
+    width: 120px;
+    height: 60px;
+    color: white;
+    background-color: #D49034;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 2px 2px 4px black;
+}
