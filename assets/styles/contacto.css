@@ -61,9 +61,11 @@ button{
 @media (min-width: 1024px) {
     main {
         flex-direction: row;
+        width: 60%;
     }
 
     form{
         margin: 20px;
+        width: 80%;
     }
 }
