@@ -23,32 +23,24 @@ const creditCards = ['Mercado Pago','Visa','MasterCard']
 
 $paymentMethods.innerHTML += metodosPago(creditCards)
 
-$finalPrice.innerHTML = `$ ${llenarTotal()}`
 
 
-if (cartProducts == [] ){
-    $shopTitle.innerHTML = `Productos a comprar` 
-}else {
-    $shopTitle.innerHTML = `Sin productos añadidos` 
-}
+
 
 
 $btnPay.addEventListener('click', () => {
 
-    $prodsAddedContainer.innerHTML = `Compra realizada` 
+    $prodsAddedContainer.innerHTML = `Compra realizada`
+    localStorage.removeItem('cartProducts')
+    $finalPrice.textContent = `$ 0`
+    
 })
 
 // Funciones
 llenarCartData(cartProducts)
 //Estructura a completar con productos
 function cartData(product){
-    let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || []
-    let add = false
-    cartProducts.forEach(product =>  {
-        product.producto._id == product.id
-        add = true
-    });
-    if(add){
+    
     return `
         <div class="separador">
             <div class="cartItemsDetail">
@@ -60,10 +52,7 @@ function cartData(product){
             <p class='cartItemPrice'>$ ${product.precio}</p>
         </div>
     `
-    } else {
-        return `
-        ` 
-    }
+    
 }
 
 
@@ -75,7 +64,7 @@ $prodsAddedContainer.addEventListener('click', (e)=>{
         quitarFavoritos(e.target.dataset.id)
         llenarCartData(cartProducts)
     }
-    llenarCartData(cartProducts)
+    
 
 })
 
@@ -83,7 +72,8 @@ $prodsAddedContainer.addEventListener('click', (e)=>{
 //LLenar con productos desde LS
 function llenarCartData(productos){
     
-    
+    let articulos = ''
+
     for(let articulo of productos){
         let precio = articulo.producto.precio * articulo.quantity
         let cantidad = articulo.quantity
@@ -93,23 +83,34 @@ function llenarCartData(productos){
             cantidad: cantidad,
             precio: precio
         }
-        $prodsAddedContainer.innerHTML += cartData(productoAdd)
+        articulos += cartData(productoAdd)
         
     }
+    $prodsAddedContainer.innerHTML = articulos
+    if (cartProducts.length != 0 ){
+        $shopTitle.textContent = `Productos a comprar` 
+    }else {
+        $shopTitle.textContent = `Sin productos añadidos` 
+    }
+    $finalPrice.textContent = `$ ${llenarTotal()}`
+
     
 }
 function llenarTotal(){
     const total = cartProducts.reduce((acumulador,producto) => acumulador + (producto.producto.precio * producto.quantity) ,0)
-    
     return total 
 }
 
 function quitarFavoritos(id){
-    
     cartProducts = cartProducts.filter((product) => product.producto._id != id) 
     localStorage.setItem("cartProducts",JSON.stringify(cartProducts))
-
 }
+
+
+
+
+
+
 
 //Añadir metodos de pago
 
