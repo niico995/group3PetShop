@@ -93,27 +93,3 @@ select * {
 }
 
 
-footer {
-    background-color: #E08846;
-    height: 70px;
-    position: static;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    align-items: center;
-    margin-top: 50px;
-}
-.dogLogo {
-    width: 50px;
-}
-.github {
-    width: 50px;
-    height: 50px;
-}
-.cohort {
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-}
