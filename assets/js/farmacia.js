@@ -24,12 +24,25 @@ function cardMaker(productos, $containerId) {
             ${estadoDisponibilidad}
             <a href="./details.html?id=${producto._id}">  
            <button type="button" class='detailsBtn'>DETAILS</button>
-           <button id="${producto._id}"> AÑADIR AL CARRITO   </button>
            </a>
+           <div class="add_number_container">
+           <button id="${producto._id}" class="addToCartBtn"> 🛒 Añadir al carrito</button>
+           <input type="number" id="quantity_${producto._id}" class="cart_number" min="1" value="1">
+          </div>
             </article>`;
     }, "");
     $containerId.innerHTML = cardHtml;
   }
+  const addToCartButtons = document.querySelectorAll('.addToCartBtn');
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const productId = button.id;
+      const quantityInput = document.getElementById(`quantity_${productId}`);
+      const quantity = parseInt(quantityInput.value, 10);
+      
+      addToCart(productId, quantity);
+    });
+  });
 }
 
 export const productosFarmacia = productos.filter(
@@ -48,3 +61,17 @@ if ($inputText) {
     cardMaker(productosFiltrados, $containerId);
   });
 }
+
+///////// funcion para guardar en el local storage
+function addToCart(productId, quantity) {
+  const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  const existingProductIndex = cartProducts.indexOf(productId);
+  const producto = productos.find(producto => producto._id === productId)
+
+  if (existingProductIndex === -1) {
+    cartProducts.push({ producto, quantity });
+  } else {
+    cartProducts[existingProductIndex].quantity += quantity;
+  }
+  localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+  console.log(`Producto con ID ${productId}  ${quantity} unidad/unidades añadido al carrito.`);}
