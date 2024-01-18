@@ -16,7 +16,7 @@ function cardMaker(productos, $containerId) {
           : disponiblesTexto;
 
       return `${acumulador}
-            <article>
+            <article class="product_card">
             <img src=${producto.imagen} alt="imagen">
             <h1>${producto.producto}</h1>
             <p>Precio: $${producto.precio}</p>
