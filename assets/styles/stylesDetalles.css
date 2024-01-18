@@ -26,7 +26,6 @@
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 20px;
-    text-justify: distribute-all-lines;
 }
 
 #price{
@@ -41,4 +40,88 @@
     margin-bottom: 20px;
     font-size: large;
     font-weight: bold;
+}
+
+@media (max-width: 425px) {
+    #containerDetails {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #description {
+        max-width: 40%;
+        font-size: 16px;
+    }
+
+    .textContent {
+        margin-left: 350px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #containerDetails img{
+        width: 20%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 25px;
+    
+    }
+}
+
+@media (max-width: 768px) {
+    #containerDetails {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #description {
+        max-width: 40%;
+        font-size: 16px;
+    }
+
+    .textContent {
+        margin-left: 350px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #containerDetails img{
+        width: 25%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 25px;
+    
+    }
+}
+
+@media (min-width: 1024px) {
+    #containerDetails {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #description {
+        max-width: 40%;
+        font-size: 16px;
+    }
+
+    .textContent {
+        margin-left: 50px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #containerDetails img{
+        width: 45%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 25px;
+    
+    }
 }
