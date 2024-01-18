@@ -20,7 +20,6 @@ function cardMaker(productos, $containerId) {
             <img src=${producto.imagen} alt="imagen">
             <h1>${producto.producto}</h1>
             <p>Precio: $${producto.precio}</p>
-            <p>${producto.descripcion}</p>
             ${estadoDisponibilidad}
             <a href="./detallesJuguetes.html?id=${producto._id}">  
            <button type="button">DETAILS</button>
