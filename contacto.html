@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./contacto.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
     <header>
-        <nav>
-            
-        </nav>
+      <nav></nav>
     </header>
 
     <main>
-        <form id="commentForm">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-        
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-        
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
-        
-            <label for="mascota">Mascota:</label>
-            <select id="mascota" name="mascota" required>
-                <option value="gato">Gato</option>
-                <option value="perro">Perro</option>
-                <option value="otro">Otro</option>
-            </select>
-        
-            <label for="comentarios">Comentarios:</label>
-            <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
-        
-            <button type="button" id="botton_enviar">Enviar</button>
-        </form>
+      <div class="divForm">
+        <p>
+          <span class="font-bold">¡Gracias por Ponerte en Contacto con Nosotros!</span><br><br> Estamos encantados de
+          que hayas decidido contactarnos. Tu interés en nuestros productos y
+          servicios es muy importante para nosotros. Por favor, completa el
+          siguiente formulario con tus datos y comentarios, y nos aseguraremos
+          de responderte en el menor tiempo posible.
+        </p>
+      </div>
+      <form id="commentForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required />
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required />
+
+        <label for="mascota">Mascota:</label>
+        <select id="mascota" name="mascota" required>
+          <option value="gato">Gato</option>
+          <option value="perro">Perro</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="comentarios">Comentarios:</label>
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          rows="4"
+          required
+        ></textarea>
+
+        <button class="bg-[#D49034]" type="button" id="botton_enviar">Enviar</button>
+      </form>
     </main>
 
-    <footer>
-        
-    </footer>
-    <script src="./js/contacto.js"></script>
-</body>
+    <footer></footer>
+    <script src="./contacto.js"></script>
+  </body>
 </html>

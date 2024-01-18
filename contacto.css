@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: #e7e7e7;
+    border-radius: 1.5rem;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 65%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.divForm {
+    width: 35%;
+    padding-left: 2rem;
+}
+
+button{
+    margin-top: 1rem;
+    border-radius: 6px;
+}
