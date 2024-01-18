@@ -36,7 +36,7 @@ function cardMaker(productos, $containerId) {
       const productId = button.id;
       const quantityInput = document.getElementById(`quantity_${productId}`);
       const quantity = parseInt(quantityInput.value, 10);
-
+      
       addToCart(productId, quantity);
     });
   });
@@ -65,9 +65,10 @@ if ($inputText) {
 function addToCart(productId, quantity) {
   const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
   const existingProductIndex = cartProducts.indexOf(productId);
+  const producto = productos.find(producto => producto._id === productId)
 
   if (existingProductIndex === -1) {
-    cartProducts.push({ productId, quantity });
+    cartProducts.push({ producto, quantity });
   } else {
     cartProducts[existingProductIndex].quantity += quantity;
   }
