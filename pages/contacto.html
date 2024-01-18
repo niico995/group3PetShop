@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../assets/styles/headerFooter.css" />
+    <link rel="stylesheet" href="../assets/styles/contacto.css">
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <header>
@@ -22,8 +24,16 @@
         /></a>
       </nav>
     </header>
-
-    <main>
+<main>
+    <div class="divForm">
+        <p>
+          <span class="font-bold">¡Gracias por Ponerte en Contacto con Nosotros!</span><br><br> Estamos encantados de
+          que hayas decidido contactarnos. Tu interés en nuestros productos y
+          servicios es muy importante para nosotros. Por favor, completa el
+          siguiente formulario con tus datos y comentarios, y nos aseguraremos
+          de responderte en el menor tiempo posible.
+        </p>
+      </div>
       <form id="commentForm">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required />
@@ -49,7 +59,7 @@
           required
         ></textarea>
 
-        <button type="button" id="botton_enviar">Enviar</button>
+        <button class="bg-[#D49034]" type="button" id="botton_enviar">Enviar</button>
       </form>
     </main>
 
