@@ -57,6 +57,7 @@ header {
     width: 10rem;
     height: 15rem;
     object-fit:contain;
+    margin-right: 5px;
 }
 
 .divMapa {
