@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/headerFooter.css">
+</head>
+<body>
+    <header>
+        <img class="bigLogo" src="../assets/img/petlogo.png" alt="petshop logo" />
+        <nav>
+          <a href="../index.html">Home</a>
+          <a href="#">Contacto</a>
+          <a href="../pages/farmacia.html">Farmacia</a>
+          <a href="../pages/jugueteria.html">Juguetes</a>
+          <a href="../pages/cart.html"
+            ><img
+              class="cart"
+              src="../assets/img/order (1).png"
+              alt="carrito de compras"
+          /></a>
+        </nav>
+      </header>
+
+    <main>
+        <form id="commentForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        
+            <label for="mascota">Mascota:</label>
+            <select id="mascota" name="mascota" required>
+                <option value="gato">Gato</option>
+                <option value="perro">Perro</option>
+                <option value="otro">Otro</option>
+            </select>
+        
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+        
+            <button type="button" id="botton_enviar">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <img
+          class="dogLogo"
+          src="../assets/img/dogLogo.png"
+          alt="cara de bulldog logo"
+        />
+        <p class="cohort">Cohort N°53 | Grupo 3</p>
+        <img class="github" src="../assets/img/github.png" alt="github logo" />
+      </footer>
+    <script src="../assets/js/contacto.js"></script>
+</body>
+</html>
