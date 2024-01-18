@@ -10,19 +10,21 @@ console.log(productosJugueteria);
  const $containerDetails = document.getElementById (`containerDetails`)
  
  const disponiblesTexto =productoId.disponibles < 5
-   ? `<p>Disponibles: ${productoId.disponibles} ¡Pocas unidades!</p>`
-   : `<p>Disponibles: ${productoId.disponibles}</p>`;
+   ? `<p id="stock">Disponibles: ${productoId.disponibles} ¡Pocas unidades!</p>`
+   : `<p id="stock">Disponibles: ${productoId.disponibles}</p>`;
 const estadoDisponibilidad =productoId.disponibles === 0
-   ? `<p>Producto agotado</p>`
+   ? `<p id="stock">Producto agotado</p>`
    : disponiblesTexto;
 
 
 $containerDetails.innerHTML = `
 
 <img src=${productoId.imagen} alt="imagen">
+<div class="textContent">
 <h1>${productoId.producto}</h1>
-<p>Precio: $${productoId.precio}</p>
-<p>${productoId.descripcion}</p>
+<p id="price" >$${productoId.precio}</p>
+<p id= "description">${productoId.descripcion}</p>
+<div>
 ${estadoDisponibilidad}
 
 `
