@@ -22,7 +22,7 @@ function cardMaker(productos, $containerId) {
             <p>Precio: $${producto.precio}</p>
             <p>${producto.descripcion}</p>
             ${estadoDisponibilidad}
-            <a href="./details.html?id=${producto._id}">  
+            <a href="./detallesJuguetes.html?id=${producto._id}">  
            <button type="button">DETAILS</button>
            </a>
            <input type="number" id="quantity_${producto._id}" min="1" value="1">
@@ -75,7 +75,6 @@ function addToCart(productId, quantity) {
   localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
   console.log(`Producto con ID ${productId}  ${quantity} unidad/unidades añadido al carrito.`);
 }
-
 
 
 
