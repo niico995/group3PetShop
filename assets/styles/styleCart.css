@@ -93,3 +93,38 @@ select * {
 }
 
 
+.closeX {
+    width: 15px;
+    background-color: #ffffff00;
+    border: none;
+}
+.closeX:active {
+    width: 20px;
+}
+
+.btnCant {
+    font-size: 14px;
+    width: 15px;
+}
+.cartItems {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.cartItemsDetail, .separador {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.prodName {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#totalShop {
+    font-weight: bold;
+    font-size: 16px;
+}

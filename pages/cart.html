@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>G3 - PetShop</title>
+    <link rel="shortcut icon" href="../assets/img/dogLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/styles/styleCart.css" />
-    <link rel="stylesheet" href="../assets/styles/headerFooter.css">
+    <link rel="stylesheet" href="../assets/styles/headerFooter.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +21,7 @@
         <a href="#">Home</a>
         <a href="#">Contacto</a>
         <a href="#">Farmacia</a>
-        <a href="#">Juguetes</a>
+        <a href="./jugueteria.html">Juguetes</a>
         <a href="#"
           ><img
             class="cart"
@@ -32,11 +33,8 @@
 
     <main>
       <div class="containerData">
-        <h2 id="cartTitle">Sin productos en el carrito</h2>
-        <div class="cartItems">
-          <div id="cartItemsDetail"></div>
-          <p id="cartItemPrice"></p>
-        </div>
+        <h2 id="cartTitle"></h2>
+        <div class="cartItems" id="cartItems"></div>
       </div>
       <div class="containerPrice">
         <h2 class="total">Total</h2>
@@ -46,10 +44,10 @@
       <div class="paymentMethods">
         <select name="payment" title="payment" id="payment">
           <option value="null" selected disabled>Método de pago</option>
-          
         </select>
         <button id="btnPay" type="submit">
           <img class="pay" src="../assets/img/payment.png" alt="payment icon" />
+          <p>Comprar</p>
         </button>
       </div>
     </main>
