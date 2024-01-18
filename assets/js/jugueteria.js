@@ -42,7 +42,6 @@ function cardMaker(productos, $containerId) {
       
       addToCart(productId, quantity);
       updateQuantity(productId,quantity)
-      cardMaker(productosFiltrados, $containerId);
 
     });
   });
