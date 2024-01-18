@@ -22,21 +22,34 @@ function cardMaker(productos, $containerId) {
             <p>Precio: $${producto.precio}</p>
             <p>${producto.descripcion}</p>
             ${estadoDisponibilidad}
-            <a href="./details.html?id=${producto._id}">  
+            <a href="./detallesJuguetes.html?id=${producto._id}">  
            <button type="button">DETAILS</button>
            </a>
-            </article>`;
+           <input type="number" id="quantity_${producto._id}" min="1" value="1">
+           <button id="${producto._id}" class="addToCartBtn"> Añadir al carrito  </button>
+           </article>`;
     }, "");
     $containerId.innerHTML = cardHtml;
   }
-}
+  const addToCartButtons = document.querySelectorAll('.addToCartBtn');
+  addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const productId = button.id;
+      const quantityInput = document.getElementById(`quantity_${productId}`);
+      const quantity = parseInt(quantityInput.value, 10);
 
+      addToCart(productId, quantity);
+    });
+  });
+  }
+////// categoria 
 export const productosJugueteria = productos.filter(
   (producto) => producto.categoria === "jugueteria"
 );
 
 cardMaker(productosJugueteria, $containerId);
 
+/////////// filtro
 if ($inputText) {
   $inputText.addEventListener("input", () => {
     const searchTerm = $inputText.value.toLowerCase();
@@ -47,3 +60,23 @@ if ($inputText) {
     cardMaker(productosFiltrados, $containerId);
   });
 }
+
+
+///////// funcion para guardar en el local storage
+function addToCart(productId, quantity) {
+  const cartProducts = JSON.parse(localStorage.getItem('cartProducts'));
+  const existingProductIndex = cartProducts.findIndex(item => item.productId === productId);
+
+  if (existingProductIndex === -1) {
+    cartProducts.push({ productId, quantity });
+  } else {
+    cartProducts[existingProductIndex].quantity += quantity;
+  }
+  localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+  console.log(`Producto con ID ${productId}  ${quantity} unidad/unidades añadido al carrito.`);
+}
+
+
+
+
+
