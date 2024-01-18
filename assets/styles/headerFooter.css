@@ -22,15 +22,15 @@ nav {
 nav a {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
 }
 
 .bigLogo {
-    width: 150px;
+    width: 110px;
 }
 .cart {
-    width: 40px;
+    width: 30px;
 }
 
 
@@ -57,4 +57,19 @@ footer {
     font-size: 14px;
     color: white;
     font-weight: bold;
+}
+
+
+@media (min-width: 768px) {
+    nav a {
+        font-size: 18px;
+    }
+
+    .bigLogo {
+        width: 150px;
+    }
+    .cart {
+        width: 40px;
+    }
+    
 }

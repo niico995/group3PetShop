@@ -21,7 +21,7 @@ function cardMaker(productos, $containerId) {
           <h1>${producto.producto}</h1>
           <p class="price">$${producto.precio}</p>
           ${estadoDisponibilidad}
-          <a href="./detallesJuguetes.html?id=${producto._id}">
+          <a href="./details.html?id=${producto._id}">
         <div class="button_container">  
          <button type="button" class="detailsBtn">🐾Detalles</button>
          </a>
@@ -41,6 +41,8 @@ function cardMaker(productos, $containerId) {
       const quantity = parseInt(quantityInput.value, 10);
 
       addToCart(productId, quantity);
+      updateQuantity(productId, quantity);
+      cardMaker(productosFarmacia, $containerId);
     });
   });
 }
@@ -64,9 +66,11 @@ if ($inputText) {
 
 ///////// funcion para guardar en el local storage
 function addToCart(productId, quantity) {
-  const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-  const existingProductIndex = cartProducts.findIndex(item => item.producto && item.producto._id === productId);
-  const producto = productos.find(producto => producto._id === productId);
+  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const existingProductIndex = cartProducts.findIndex(
+    (item) => item.producto && item.producto._id === productId
+  );
+  const producto = productos.find((producto) => producto._id === productId);
   // const existingProductIndex = cartProducts.indexOf(productId);
   // const producto = productos.find(producto => producto._id === productId)
 
@@ -75,23 +79,27 @@ function addToCart(productId, quantity) {
   } else {
     cartProducts[existingProductIndex].quantity += quantity;
   }
-  localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
-  console.log(`Producto con ID ${productId}  ${quantity} unidad/unidades añadido al carrito.`);
+  localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+  console.log(
+    `Producto con ID ${productId}  ${quantity} unidad/unidades añadido al carrito.`
+  );
 }
 
-
-
 function updateQuantity(productId, newQuantity) {
-  const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
-  const productIndex = cartProducts.findIndex(item => item.productId === productId);
+  const productIndex = cartProducts.findIndex(
+    (item) => item.productId === productId
+  );
 
   if (productIndex !== -1) {
     cartProducts[productIndex].quantity = newQuantity;
 
-    localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+    localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
 
-    console.log(`Cantidad del producto con ID ${productId} actualizada a ${newQuantity}.`);
+    console.log(
+      `Cantidad del producto con ID ${productId} actualizada a ${newQuantity}.`
+    );
   } else {
     console.log(`Producto con ID ${productId} no encontrado en el carrito.`);
   }

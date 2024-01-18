@@ -41,6 +41,9 @@ function cardMaker(productos, $containerId) {
       const quantity = parseInt(quantityInput.value, 10);
       
       addToCart(productId, quantity);
+      updateQuantity(productId,quantity)
+      cardMaker(productosFiltrados, $containerId);
+
     });
   });
   }

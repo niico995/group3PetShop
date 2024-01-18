@@ -20,9 +20,11 @@ const estadoDisponibilidad =productoId.disponibles === 0
 $containerDetails.innerHTML = `
 
 <img src=${productoId.imagen} alt="imagen">
+<div class="textContent">
 <h1>${productoId.producto}</h1>
-<p>Precio: $${productoId.precio}</p>
-<p>${productoId.descripcion}</p>
+<p id="price" >$${productoId.precio}</p>
+<p id= "description">${productoId.descripcion}</p>
+<div>
 ${estadoDisponibilidad}
 
 `
