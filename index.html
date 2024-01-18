@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetShop</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main>
+      <div class="divBanner">
+        <img class="imgBanner" src="./recursos/bannerHome.webp" alt="banner" />
+        <p class="pBanner">
+          ¡Bienvenido a nuestra Pet Shop, tu destino único para el bienestar y
+          la felicidad de tus adoradas mascotas!<br /><br />En Pet Shop,
+          entendemos que tus amigos peludos son parte fundamental de tu vida, y
+          es por eso que nos dedicamos a proporcionar productos y servicios de
+          la más alta calidad para satisfacer todas sus necesidades. Nos
+          enorgullece ser tu socio confiable en el cuidado de tus mascotas,
+          ofreciéndote una experiencia única en cada visita.
+        </p>
+      </div>
+      <section class="sectionServicios">
+        <h1 class="font-bold text-4xl p-4 pt-7 text-center">
+          Nuestros servicios
+        </h1>
+        <article class="divServicios flex justify-around wrap">
+          <div class="divCards">
+            <h2>
+              Encuentra todo tipo de medicamentos para tu mascota en nuestra
+              farmacia
+            </h2>
+            <a href=""
+              ><img
+                class="imgFarmacia"
+                src="./recursos/botonFarmacia.webp"
+                alt="ImagenFarmacia"
+            /></a>
+          </div>
+          <div class="divCards">
+            <h2>
+              Encuentra los mejores juguetes para tu mascota en nuestra tienda
+            </h2>
+            <a href=""
+              ><img
+                class="imgFarmacia"
+                src="./recursos/botonJuguetes.webp"
+                alt="imagenJuguetes"
+            /></a>
+          </div>
+        </article>
+      </section>
+      <section class="sectionServicios">
+        <h1 class="font-bold text-4xl p-4 pt-7 text-center">
+          Nos encuentras en
+        </h1>
+        <article class="divMapa flex justify-around wrap">
+          <div class="p-5 flex items-center">
+            <p>
+              Con fácil acceso desde Avenida Paraguay y
+              estacionamiento disponible, visitarnos es tan sencillo como mimar
+              a tus peludos amigos. Nuestro amable personal estará encantado de
+              ayudarte a encontrar todo lo que necesitas para el bienestar y
+              felicidad de tus mascotas.<br><br> Ven y descubre las últimas tendencias
+              en juguetes, accesorios, alimentos y cuidado para mascotas. ¡No te
+              pierdas la oportunidad de brindarles a tus amigos peludos la
+              atención que se merecen!
+            </p>
+          </div>
+          <div class="p-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.246851681766!2d-58.40115584617429!3d-34.59791891164762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb4bca1d37f3%3A0x2cfd0d9727584d9!2sMindhu!5e0!3m2!1ses-419!2sco!4v1705588994677!5m2!1ses-419!2sco"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>* {
+    margin: 0;
+}
+
+header {
+    background-color: #d49034;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoHeader {
+    width:10%;
+}
+
+.divBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pBanner {
+    width: 60%;
+    padding: 2rem;
+    background-color: #e7e7e7;
+    border-radius: 1.5rem;
+}
+
+.imgBanner {
+    padding-bottom: 2rem;
+    width: 60%;
+}
+
+.sectionServicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.divServicios {
+    width: 60%;
+    background-color: #e7e7e7;
+    border-radius: 1.5rem;
+}
+
+.divCards{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.imgFarmacia {
+    width: 10rem;
+    height: 15rem;
+    object-fit:contain;
+}
+
+.divMapa {
+    width: 80%;
+    background-color: #e7e7e7;
+    border-radius: 1.5rem;
+}
+</html>

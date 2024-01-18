@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            
+        </nav>
+    </header>
+
+    <main>
+        <form id="commentForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        
+            <label for="mascota">Mascota:</label>
+            <select id="mascota" name="mascota" required>
+                <option value="gato">Gato</option>
+                <option value="perro">Perro</option>
+                <option value="otro">Otro</option>
+            </select>
+        
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" required></textarea>
+        
+            <button type="button" id="botton_enviar">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        
+    </footer>
+    <script src="./js/contacto.js"></script>
+</body>
+</html>
