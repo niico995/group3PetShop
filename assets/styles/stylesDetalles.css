@@ -1,0 +1,44 @@
+
+#containerDetails{
+    display: flex;
+    flex-direction: row;
+    width:1000px;
+    font-family: "Roboto";
+    margin-top: 50px;
+    margin-bottom: 200px;
+    gap:50px;
+    text-align: justify;
+}
+
+#containerDetails img{
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+
+}
+#title{
+    font-weight: 700;
+    font-size: 150px;
+}
+
+#description{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    text-justify: distribute-all-lines;
+}
+
+#price{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight:400;
+}
+
+#stock{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: bold;
+}
