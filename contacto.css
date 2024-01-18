@@ -5,8 +5,9 @@
 
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 60%;
+    width: 80%;
     background-color: #e7e7e7;
     border-radius: 1.5rem;
     align-items: center;
@@ -15,8 +16,7 @@ main{
 form{
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    width: 65%;
+    padding-bottom: 1rem;
 }
 
 body{
@@ -25,11 +25,20 @@ body{
 }
 
 .divForm {
-    width: 35%;
-    padding-left: 2rem;
+    padding: 1rem;
 }
 
 button{
     margin-top: 1rem;
     border-radius: 6px;
+}
+
+@media (min-width: 768px){
+    main {
+        flex-direction: row;
+    }
+
+    form{
+        margin: 20px;
+    }
 }
